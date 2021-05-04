@@ -10,7 +10,7 @@ import java.util.List;
  * @Author: Alan
  * @Date: 2021/5/3 22:09
  */
-public class OrderServiceImpl implements OrderService{
+public class OrderServiceImpl implements OrderService {
     @Override
     public List<UserAddress> initOrder(String userId) {
         return null;

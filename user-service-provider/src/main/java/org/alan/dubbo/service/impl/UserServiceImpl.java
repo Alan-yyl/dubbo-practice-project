@@ -10,9 +10,9 @@ import java.util.List;
  * @Author: Alan
  * @Date: 2021/5/3 22:12
  */
-public class UserServiceImpl implements OrderService{
+public class UserServiceImpl implements UserService{
     @Override
-    public List<UserAddress> initOrder(String userId) {
+    public List<UserAddress> getUserAddressList(String userId) {
         return null;
     }
 }
