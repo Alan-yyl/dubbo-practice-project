@@ -10,7 +10,8 @@
 
     <!--  指定注册中心的位置-->
     <dubbo:registry address="zookeeper://"/>
-
+    <!--    配置监控中心-->
+    <dubbo:monitor protocol="registry"/>
     <!-- 订阅服务 -->
     <dubbo:reference id="userService" interface="org.alan.dubbo.service.UserService"/>
 </beans>

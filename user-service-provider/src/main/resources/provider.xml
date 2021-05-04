@@ -5,12 +5,14 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
 	   http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!--        1、指定当前服务的名字-->
+    <!--    1、指定当前服务的名字-->
     <dubbo:application name="user-service-provider"/>
-    <!--        2、指定注册中心的位置-->
-    <dubbo:registry address="zookeeper://"/>
+    <!--    2、指定注册中心的位置-->
+    <dubbo:registry address="zookeeper://47.98.136.170:2181"/>
     <!--    3、指定通信协议-->
     <dubbo:protocol name="dubbo" port="20880"/>
+    <!--    配置监控中心-->
+    <dubbo:monitor protocol="registry"/>
     <!--    4、暴露服务 ref:指定服务的实现对象-->
     <dubbo:service interface="org.alan.dubbo.service.UserService" ref="userServiceImp"/>
     <!--    5、服务的实现-->
