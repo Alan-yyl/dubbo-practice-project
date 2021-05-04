@@ -1,7 +1,9 @@
+import org.alan.dubbo.bean.UserAddress;
 import org.alan.dubbo.service.UserService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
+import org.alan.dubbo.bean.UserAddress;
 
 /**
  * @Author: Alan
@@ -14,8 +16,10 @@ public class MainApplication {
         //获取远程服务
         UserService userService = (UserService) context.getBean("userService");
         //执行远程方法
-        List hello = userService.getUserAddressList("test");
-        System.out.println(hello);
+        List<UserAddress> list = userService.getUserAddressList("test");
+        for (UserAddress userAddress : list) {
+            System.out.println(userAddress.getUserAddress());
+        }
         // 按任意键退出
         System.in.read();
     }
